@@ -109,3 +109,39 @@ for (let i = 0; i < n; i++) {
 
     console.log(row);
 }
+//  |   1   | 
+//  |  222  | 
+//  | 33333 |
+//  |4444444|
+//  | 33333 |
+//  |  222  |
+//  |   1   |
+
+let n = 7, half = Math.floor(n/2)
+for(let i=0;i<n;i++){
+    let row = "|"
+    let start, space , str;
+    if(i<=half){
+        start = 2*i + 1
+        space = half - i;
+        str = start - i;
+    }else{
+        start = 2*(n-i) - 1;
+        space = i-half;
+        str = n - i;
+    }
+    for(let j=0 ;j<space; j++ ){
+        row = row + " ";
+    }
+    for(let j=0; j<start;j++){
+        row = row + str;
+    }
+    for(let j=0 ;j<space; j++ ){
+        row = row + " ";
+    }
+    console.log(row + "|")
+}
+
+
+
+
